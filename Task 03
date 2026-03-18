@@ -1,0 +1,285 @@
+#  -------- Section 1 — Loop Basics (1–10) -------------
+
+# 1 Print numbers 1 to 50
+for i in range(1,51):
+    print(i)
+
+# 2 Even numbers 1 to 100
+for i in range(1,101):
+    if i % 2 == 0:
+        print(i)
+
+# 3 Odd numbers 1 to 100
+for i in range(1,101):
+    if i % 2 != 0:
+        print(i)
+
+# 4 Table of 7
+for i in range(1,11):
+    print("7 x", i, "=", 7*i)
+
+# 5 Sum 1 to 100
+sum = 0
+for i in range(1,101):
+    sum = sum + i
+print("Sum =", sum)
+
+# 6 Reverse 50 to 1
+for i in range(50,0,-1):
+    print(i)
+
+# 7 Count numbers divisible by 3
+count = 0
+for i in range(1,101):
+    if i % 3 == 0:
+        count += 1
+print("Count =", count)
+
+# 8 Squares 1 to 10
+for i in range(1,11):
+    print(i*i)
+
+# 9 Cubes 1 to 10
+for i in range(1,11):
+    print(i*i*i)
+
+# ------------- Section 2 — While Loop (11–15) -------------------
+
+# 10 Print 1 to n
+n = int(input("Enter n: "))
+for i in range(1,n+1):
+    print(i)
+
+
+# 11 Print 1 to 20
+i = 1
+while i <= 20:
+    print(i)
+    i += 1
+
+# 12 Factorial
+n = int(input("Enter number: "))
+fact = 1
+i = 1
+while i <= n:
+    fact = fact * i
+    i += 1
+print("Factorial =", fact)
+
+# 13 Reverse number
+num = int(input("Enter number: "))
+rev = 0
+while num > 0:
+    d = num % 10
+    rev = rev*10 + d
+    num //= 10
+print("Reverse =", rev)
+
+# 14 Count digits
+num = int(input("Enter number: "))
+count = 0
+while num > 0:
+    count += 1
+    num //= 10
+print("Digits =", count)
+
+# 15 Stop word loop
+while True:
+    word = input("Enter word: ")
+    if word == "stop":
+        break
+
+# ---------------- Section 3 — Nested Loop OUTPUT (16–20) -------------------
+
+# 16 Star pattern
+for i in range(1,5):
+    for j in range(i):
+        print("*", end="")
+    print()
+
+# 17 Number pattern
+for i in range(1,5):
+    for j in range(1,i+1):
+        print(j, end="")
+    print()
+
+# 18 Tables 1 to 5
+for i in range(1,6):
+    for j in range(1,11):
+        print(i*j, end=" ")
+    print()
+
+# 19 A B C pattern
+for i in range(3):
+    for j in ["A","B","C"]:
+        print(j, end=" ")
+    print()
+
+# 20 Matrix pattern
+num = 1
+for i in range(3):
+    for j in range(3):
+        print(num, end=" ")
+        num += 1
+    print()
+
+# ----------- Section 4 — String OUTPUT (21–25) ------------
+
+# 21 Count characters
+s = input("Enter string: ")
+count = 0
+for i in s:
+    count += 1
+print("Characters =", count)
+
+# 22 Count vowels
+vowels = "aeiouAEIOU"
+count = 0
+for i in s:
+    if i in vowels:
+        count += 1
+print("Vowels =", count)
+
+# 23 Count consonants
+count = 0
+for i in s:
+    if i.isalpha() and i not in vowels:
+        count += 1
+print("Consonants =", count)
+
+# 24 Reverse string using loop
+rev = ""
+for i in s:
+    rev = i + rev
+print("Reverse =", rev)
+
+# 25 Palindrome
+if s == rev:
+    print("Palindrome")
+else:
+    print("Not Palindrome")
+
+# ----------- Section 4 — String Basics (21–25) -------------
+
+# 21 Count characters
+s = input("Enter string: ")
+count = 0
+for i in s:
+    count += 1
+print("Characters =", count)
+
+# 22 Count vowels
+vowels = "aeiouAEIOU"
+count = 0
+for i in s:
+    if i in vowels:
+        count += 1
+print("Vowels =", count)
+
+# 23 Count consonants
+count = 0
+for i in s:
+    if i.isalpha() and i not in vowels:
+        count += 1
+print("Consonants =", count)
+
+# 24 Reverse string using loop
+rev = ""
+for i in s:
+    rev = i + rev
+print("Reverse =", rev)
+
+# 25 Palindrome
+if s == rev:
+    print("Palindrome")
+else:
+    print("Not Palindrome")
+
+# --------------- Section 5 — String Slicing (26–30) --------------
+
+s = input("Enter string: ")
+
+# 26 First 5
+print(s[:5])
+
+# 27 Last 3
+print(s[-3:])
+
+# 28 Reverse slicing
+print(s[::-1])
+
+# 29 Every 2nd char
+print(s[::2])
+
+# 30 Remove first & last
+print(s[1:-1]) 
+
+# --------------- Section 6 — List Basics (31–35) --------------
+
+# 31 Sum of list
+l = [10,20,30,40,50]
+sum = 0
+for i in l:
+    sum += i
+print("Sum =", sum)
+
+# 32 Max
+max_val = l[0]
+for i in l:
+    if i > max_val:
+        max_val = i
+print("Max =", max_val)
+
+# 33 Min
+min_val = l[0]
+for i in l:
+    if i < min_val:
+        min_val = i
+print("Min =", min_val)
+
+# 34 Count elements
+count = 0
+for i in l:
+    count += 1
+print("Total =", count)
+
+# 35 Check element
+x = int(input("Enter element: "))
+if x in l:
+    print("Exists")
+else:
+    print("Not exists")
+
+
+# --------------- Section 7 — List Operations (36–40) -------------
+
+l = []
+
+# 36 Append
+l.append(10)
+l.append(20)
+l.append(30)
+print(l)
+
+# 37 Insert
+l.insert(1,15)
+print(l)
+
+# 38 Remove
+l.remove(20)
+print(l)
+
+# 39 Reverse without reverse()
+rev = []
+for i in l:
+    rev = [i] + rev
+print(rev)
+
+# 40 Sort without sort()
+for i in range(len(l)):
+    for j in range(i+1,len(l)):
+        if l[i] > l[j]:
+            l[i], l[j] = l[j], l[i]
+print("Sorted =", l)
+
+
